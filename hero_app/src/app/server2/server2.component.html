@@ -1,0 +1,8 @@
+<p>server2 works!</p>
+
+<input  [(ngModel)]="serverName" class="form-control"  />
+<button (click)="addNewServer()" [disabled]="allNewserver">Add New working sever </button>
+
+<label *ngIf="serverCreated"> server is created with server name {{serverName}}</label>
+
+
