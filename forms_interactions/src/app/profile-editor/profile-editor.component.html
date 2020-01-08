@@ -1,0 +1,55 @@
+<form [formGroup]="profileForm" (ngSubmit)="profiler.addProfile(profileForm.value)">
+  
+    <label>
+      First Name:
+      <input type="text" formControlName="firstName">
+    </label>
+   <br><br><br>
+    <label>
+      Last Name:
+      <input type="text" formControlName="lastName">
+    </label>
+
+    <br><br><br>
+    <label>
+        Employee Id: 
+        <input type="text" formControlName="employeeId">
+    </label>
+    <br><br>
+
+    <div formGroupName="address">
+        <h3>Address</h3>
+      
+        <label>
+          Street:
+          <input type="text" formControlName="street">
+        </label>
+        <br><br><br>
+        <label>
+          City:
+          <input type="text" formControlName="city">
+        </label>
+        <br><br><br>
+        <label>
+          State:
+          <input type="text" formControlName="state">
+        </label>
+        <br><br><br>
+        <label>
+          Zip Code:
+          <input type="text" formControlName="zip">
+        </label>
+      </div>
+
+    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+   
+  
+  </form>
+
+  <p>
+    <button (click)="updateProfile()">Update Profile</button>
+  </p>
+
+ 
+      <app-profile-list  #profiler></app-profile-list>
+  
