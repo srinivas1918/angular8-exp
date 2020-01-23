@@ -1,0 +1,14 @@
+<form [formGroup]="userForm" >
+  
+  <label>
+    Enter Key: ( Example using Reactive form)
+    <input type="text" formControlName="userKey" (keyup)="onkeyUp($event)">
+  </label>
+ 
+</form>
+<br><br>
+
+<div>
+  <span>Using Template elements</span>
+  <input placeholder="search"   autocomplete="off" id="search"/>
+</div>
